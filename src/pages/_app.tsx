@@ -1,6 +1,7 @@
 import "../styles/globals.scss";
 import type { AppProps } from "next/app";
 import Head from "next/head";
+import NavBar from "./components/NavBar";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -15,6 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="author" content="Your Name or Company Name" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
+      <NavBar />
       <Component {...pageProps} />
     </>
   );

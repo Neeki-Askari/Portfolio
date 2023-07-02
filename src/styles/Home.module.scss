@@ -1,10 +1,45 @@
 .main {
   font-size: 3rem;
   font-weight: 900;
-  color: white;
+  color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+
+.navbar {
+  background-color: #2d1850;
+  position: relative;
+  z-index: 250;
+
+  .navbarContents {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+  }
+}
+
+
+
+.photo_and_tech {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  .photo {
+    width: auto;
+    height: 16rem;
+    margin-top: 2rem;
+  }
+}
+
+.links {
+  display: flex;
+  padding: 35%;
+  font-size: 2rem;
+  color: white;
+  border-bottom: 1px solid black;
 }
