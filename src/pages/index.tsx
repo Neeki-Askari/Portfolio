@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import HomeContent from "./components/Home"
 
 
 const Home: NextPage = () => {
@@ -11,7 +12,7 @@ const Home: NextPage = () => {
         <meta name="description" content="Your Apps Description" />
       </Head>
       <main >
-        Hello
+        <HomeContent />
       </main>
     </>
   );

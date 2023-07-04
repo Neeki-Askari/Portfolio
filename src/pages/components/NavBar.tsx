@@ -39,7 +39,10 @@ const NavBar: NextPage = () => {
             padding="lg"
             shadow="md"
             zIndex={2}
-            sx={{".mantine-Drawer-content": {backgroundColor: "#2d1850"}}}
+            sx={{
+                ".mantine-Drawer-content": {
+                    backgroundColor: "#2d1850",
+                }}}
             >
             {menuItems.map((item, i) => {
                return (
@@ -52,7 +55,7 @@ const NavBar: NextPage = () => {
                     </Link>
                 </div>
                )
-            } )}
+            })}
             </Drawer>
         </div>
     );
