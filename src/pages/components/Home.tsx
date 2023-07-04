@@ -20,16 +20,20 @@ const HomeContent: NextPage = () => {
                 <img src="/images/Neeki.jpg" alt="neeki-photo" className={styles.image}/>
             </div>
             <Button 
-            variant="light" 
-            color="violet"
-            radius="md"
-            size="lg"
-            leftIcon={<IconFileDownload size="2rem" />}
-            sx={{
-                width: "10rem",
-                margin: "5%",
-                color: "#2d1850"
-            }}
+                component="a"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="/images/Resume.pdf"
+                variant="light" 
+                color="violet"
+                radius="md"
+                size="lg"
+                leftIcon={<IconFileDownload size="2rem" />} 
+                sx={{
+                    width: "10rem",
+                    margin: "5%",
+                    color: "#2d1850"
+                }}
             >
                 Resume
             </Button>
