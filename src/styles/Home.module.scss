@@ -26,20 +26,28 @@
 
 .photo_and_tech {
   display: flex;
-  justify-content: center;
-  width: 100%;
+  flex-direction: column;
+  align-items: center;
 
   .photo {
-    width: auto;
-    height: 16rem;
-    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+
+    .image {
+      width: auto;
+      height: 16rem;
+      margin-top: 2rem;
+    }
   }
 }
 
 .links {
-  display: flex;
-  padding: 35%;
   font-size: 2rem;
   color: white;
-  border-bottom: 1px solid black;
+  margin: 35%;
+}
+
+.logoImage {
+  height: 100%;
+  width: auto;
 }
