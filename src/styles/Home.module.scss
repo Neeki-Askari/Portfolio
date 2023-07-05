@@ -35,16 +35,26 @@
 
     .image {
       width: auto;
-      height: 16rem;
+      height: 25vh;
+      border-radius: 50%;
       margin-top: 2rem;
     }
   }
 }
 
-.links {
+.link {
+  width: 100%;
+  border-bottom: 1px solid white;
+  margin-top: 20%;
+  display: flex;
+  justify-content: center;
+
+  .linkText {
   font-size: 2rem;
   color: white;
-  margin: 35%;
+  text-decoration: none;
+  margin-bottom: 20%;
+  }
 }
 
 .logoImage {

@@ -46,10 +46,11 @@ const NavBar: NextPage = () => {
             >
             {menuItems.map((item, i) => {
                return (
-                <div key={i} className={styles.links}>
+                <div key={i} className={styles.link}>
                     <Link 
                     href={`/components/${item}`}
                     onClick={() => setOpen((o) => !o)} 
+                    className={styles.linkText}
                     >
                         {item} 
                     </Link>
