@@ -40,6 +40,25 @@
       margin-top: 2rem;
     }
   }
+  .intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 10rem;
+    width: 30rem;
+    border-style: double;
+    color: white;
+    padding: 2%;
+    background-color: #2d1850;
+    box-shadow: 10px 10px #ffffffbc;
+  }
+
+  .tech_header {
+    align-self: flex-start;
+    margin-left: 10%;
+    margin-top: 5%;
+    color: white;
+  }
 }
 
 .link {
@@ -58,6 +77,6 @@
 }
 
 .logoImage {
-  height: 100%;
-  width: auto;
+  height: 12rem;
+  width: 12rem;
 }
