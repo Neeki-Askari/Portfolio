@@ -48,7 +48,7 @@ const NavBar: NextPage = () => {
                return (
                 <div key={i} className={styles.link}>
                     <Link 
-                    href={`/components/${item}`}
+                    href={`#${item}`}
                     onClick={() => setOpen((o) => !o)} 
                     className={styles.linkText}
                     >

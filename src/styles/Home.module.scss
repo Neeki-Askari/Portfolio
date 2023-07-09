@@ -11,8 +11,9 @@
 
 .navbar {
   background-color: #2d1850;
-  position: relative;
   z-index: 250;
+  position: fixed;
+  top: 0;
 
   .navbarContents {
     display: flex;
@@ -22,12 +23,11 @@
   }
 }
 
-
-
 .photo_and_tech {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 3rem;
 
   .photo {
     display: flex;
@@ -46,11 +46,9 @@
     align-items: center;
     height: 10rem;
     width: 30rem;
-    border-style: double;
+    border-radius: 15px;
     color: white;
     padding: 2%;
-    background-color: #2d1850;
-    box-shadow: 10px 10px #ffffffbc;
   }
 
   .tech_header {

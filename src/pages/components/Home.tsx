@@ -7,7 +7,7 @@ import TechCarousel from "./TechCarousel";
 
 const HomeContent: NextPage = () => {
     return (
-        <div className={styles.photo_and_tech}>
+        <div id="Home" className={styles.photo_and_tech}>
             <Flex
             direction="row"
             wrap="wrap"
