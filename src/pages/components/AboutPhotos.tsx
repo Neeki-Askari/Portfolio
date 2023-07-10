@@ -44,7 +44,7 @@ const AboutPhotos: NextPage = () => {
             </div>
 
             <div className={styles.grid}>
-                 <SimpleGrid cols={4}>
+            <SimpleGrid cols={4}>
             {images.map((image) => (
                 <Image 
                     src={image.image} 

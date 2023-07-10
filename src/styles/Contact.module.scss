@@ -1,0 +1,40 @@
+
+.contactOuter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1rem;
+
+    .divider {
+      display: flex;
+      align-items: center;
+      color: white;
+      margin: 1rem; 
+      width: 90%;
+  
+      .line {
+        flex: 1;
+        border: none;
+        border-top: 1px solid white; 
+      }
+    }
+    .emailOuter {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      width: 80vw;
+      .label {
+        color: white;
+  
+      }
+      .emailInput {
+        width: 60%;
+        margin-bottom: 1rem;
+      }
+
+      .subjectInput {
+        margin-bottom: 1rem;
+      }
+    }
+}
