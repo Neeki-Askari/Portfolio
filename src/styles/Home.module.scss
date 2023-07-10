@@ -74,7 +74,15 @@
   }
 }
 
-.logoImage {
-  height: 12rem;
-  width: 12rem;
+.logoOuter {
+  height: 10rem;
+  width: 10rem;
+
+  .logoImage {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+  }
+
 }
+

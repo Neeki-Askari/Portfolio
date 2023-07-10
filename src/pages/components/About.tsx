@@ -14,13 +14,13 @@ const textList: Array<string> = [
     <div id="About" className={styles.aboutOuter}>
         <div className={styles.divider}>
             <hr className={styles.line}/>
-            <h1 className={styles.aboutText}>About Me</h1>
+            <h1 className={styles.aboutText}>About</h1>
             <hr className={styles.line}/>
         </div>
         <div className={styles.aboutOuterText}>
         {textList.map((text, i) => {
             return(
-                <p className={styles.aboutText}>{text}</p>
+                <p key={i} className={styles.aboutText}>{text}</p>
             )
         })}
         </div>

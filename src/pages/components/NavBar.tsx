@@ -9,7 +9,7 @@ const NavBar: NextPage = () => {
     const theme = useMantineTheme();
     const [opened, setOpen]= useState<boolean>(false);
 
-    const menuItems = ["Home", "About", "Portfolio", "Contact"]
+    const menuItems = ["Home", "About", "Projects", "Contact"]
 
     return (
         <div>
