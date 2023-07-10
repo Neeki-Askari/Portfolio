@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Link from 'next/link';
 import {useState} from "react";
-import {Navbar, Burger, useMantineTheme, Drawer} from "@mantine/core"
+import {Navbar, Burger, useMantineTheme, Drawer, Image} from "@mantine/core"
 import styles from "../../styles/Home.module.scss";
 
 
@@ -20,13 +20,20 @@ const NavBar: NextPage = () => {
             zIndex={3}
             >        
                 <div className={styles.navbarContents}>
-                <h2>Neeki</h2>
+                <div className={styles.navbarLogo}>
+                    <Image 
+                    src="/images/logo.png"
+                    alt="neeki-logo"
+                    fit="contain"
+                    />
+                </div>
                 <Burger
                     opened={opened}
                     onClick={() => setOpen((o) => !o)}
                     size="lg"
                     color={theme.colors.gray[6]}
                     mr="xl"
+                    sx={{margin: "0.5rem"}}
                 />
 
                 </div>

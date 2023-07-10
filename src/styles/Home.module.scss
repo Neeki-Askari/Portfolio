@@ -19,8 +19,12 @@
   .navbarContents {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     color: white;
+
+    .navbarLogo {
+      width: 6rem;
+      height: 6rem;
+    }
   }
 }
 
