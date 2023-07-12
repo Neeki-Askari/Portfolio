@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import styles from "../../styles/Projects.module.scss"
-import { SimpleGrid, Image } from '@mantine/core';
+import { SimpleGrid, Image, Flex} from '@mantine/core';
 
 const Projects: NextPage = () => {
 
@@ -33,6 +33,13 @@ const Projects: NextPage = () => {
                 <h1 className={styles.header}>Projects</h1>
                 <hr className={styles.line}/>
             </div>
+            <Flex
+            direction="row"
+            wrap="wrap"
+            justify="center"
+            align="center"
+            rowGap="md"
+            >
             {projects.map((project, i) => {
                 return (
                     <div key={i} className={styles.project}>
@@ -43,7 +50,7 @@ const Projects: NextPage = () => {
                             <a className={styles.githubLink} href={`https://github.com/Neeki-Askari/${project.link}`} target="_blank">Link to Github</a>
                         </div>
                         <div className={styles.tech}>
-                                <SimpleGrid cols={project.tech.length}>
+                                <SimpleGrid cols={project.tech.length} sx={{margin: "10px"}}>
                                     {project.tech.map((logo, i) => (
                                         <div key={i} className={styles.logo}>
                                             <Image 
@@ -61,6 +68,7 @@ const Projects: NextPage = () => {
                     </div>
                 )
             })}
+            </Flex>
         </div>
     )
 }
