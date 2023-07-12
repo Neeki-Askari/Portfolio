@@ -30,15 +30,14 @@ const HomeContent: NextPage = () => {
                         href="/images/Resume.pdf"
                         variant="filled" 
                         radius="md"
-                        size="xl"
-                        leftIcon={<IconFileDownload size="2rem" />} 
+                        leftIcon={<IconFileDownload size="2.5rem" />} 
                         sx={{
-                            width: "12rem",
-                            height: "3.5rem",
+                            width: "14rem",
+                            height: "4rem",
                             color: "#fff",
                             backgroundColor: "indigo",
-                            fontSize:"1.75rem",
-                            margin: "5rem"
+                            fontSize:"2rem",
+                            margin: "3.5rem"
                         }}
                     >
                         Resume

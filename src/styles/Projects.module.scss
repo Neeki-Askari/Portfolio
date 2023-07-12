@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&family=Libre+Baskerville:wght@700&family=Orbitron:wght@800&display=swap');
+
+.font-style {
+  font-family: 'Forum', cursive;
+}
+
 .projectsOuter {
     display: flex;
     justify-content: center;
@@ -13,6 +19,7 @@
       width: 90%;
         
         h1 {
+            @extend .font-style;
             font-size: 3.75rem;
         }
 

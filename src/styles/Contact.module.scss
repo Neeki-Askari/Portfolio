@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&family=Libre+Baskerville:wght@700&family=Orbitron:wght@800&display=swap');
+
+.font-style {
+  font-family: 'Forum', cursive;
+}
 
 .contactOuter {
     display: flex;
@@ -12,7 +17,12 @@
       color: white;
       margin: 1rem; 
       width: 90%;
-  
+
+      h1 {
+        @extend .font-style;
+        font-size: 3.75rem;
+      }
+
       .line {
         flex: 1;
         border: none;

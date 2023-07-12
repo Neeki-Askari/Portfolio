@@ -1,13 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&family=Libre+Baskerville:wght@700&family=Orbitron:wght@800&display=swap');
+
+.font-style {
+  font-family: 'Forum', cursive;
+}
 
 .aboutOuter {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 1rem;
   
     .divider {
       h1 {
+        @extend .font-style;
         font-size: 3.75rem;
       }
       display: flex;
@@ -43,7 +48,7 @@
         flex-direction: column;
         align-items: center;
         width: 70vw;
-        height: 50vh;
+        height: auto;
         margin-top: 1rem;
         background-color: gray;
         border-radius: 10px;
@@ -55,6 +60,7 @@
         }
         
         .aboutPhotosHeader {
+        @extend .font-style;
         width: 100%;
         height: 10%;
         padding: 1rem;
@@ -87,7 +93,7 @@
         }
 
         .grid {
-            margin-top: 2rem;
+            margin: 1rem;
         }
 
 
