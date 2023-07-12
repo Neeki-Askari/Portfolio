@@ -21,11 +21,7 @@ const NavBar: NextPage = () => {
             >        
                 <div className={styles.navbarContents}>
                 <div className={styles.navbarLogo}>
-                    <Image 
-                    src="/images/logo.png"
-                    alt="neeki-logo"
-                    fit="contain"
-                    />
+                    <h1>Neeki</h1>
                 </div>
                 <Burger
                     opened={opened}
@@ -48,7 +44,7 @@ const NavBar: NextPage = () => {
             zIndex={2}
             sx={{
                 ".mantine-Drawer-content": {
-                    backgroundColor: "#2d1850",
+                    backgroundImage: "linear-gradient(#2d1850 , indigo)"
                 }}}
             >
             {menuItems.map((item, i) => {

@@ -29,9 +29,15 @@
 
     .navbarLogo {
       width: 6rem;
-      height: 6rem;
+      height: 100%;
       display: flex;
-      margin: 3%;
+      align-items: center;
+      font-size: 1.5rem;
+      margin-left: 1rem;
+
+      h1 {
+        @extend .font-style
+      }
     }
   }
 }
@@ -40,12 +46,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 3rem;
-
-  h2 {
-    @extend .font-style;
-    font-size: large;
-  }
+  justify-content: center;
+  margin-top: 10rem;
   
   .photo {
     display: flex;
@@ -53,30 +55,47 @@
 
     .image {
       width: auto;
-      height: 25vh;
+      height: 24rem;
       border-radius: 50%;
-      margin-top: 2rem;
     }
   }
   .intro {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 10rem;
+    height: auto;
     width: 30rem;
-    border-radius: 15px;
     color: white;
+    margin: 1rem;
+
+    h2 {
+      @extend .font-style;
+      font-size: 1.75rem;
+      line-height: 3rem;
+    }
+    h1 {
+      @extend .font-style;
+      font-size: 4rem;
+      margin: 1.75rem;
+    }
+  
   }
 
-  .tech_header {
-    align-self: flex-start;
-    margin-left: 10%;
-    margin-top: 12%;
-    margin-bottom: -5%;
-    color: white;
-    font-size: small;
+    .carousel {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      width: 80vw;
+      margin: 2.5rem;
+      .tech_header {
+        display: flex;
+        color: white;
+        font-size: 1.75rem;
+      }
+    }
   }
-}
+
+
 
 .link {
   width: 100%;

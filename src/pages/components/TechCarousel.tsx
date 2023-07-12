@@ -35,32 +35,32 @@ const TechCarousel: NextPage = () => {
     ]
 
     return (
-        <Carousel 
-        slideSize="45%" 
-        height={200} 
-        slideGap="xs" 
-        loop
-        sx={{
-            width: "70%",
-            marginTop: "5%"
-        }}
-        >
-            {logos.map((logo, i) => {
-                return (
-                    <Carousel.Slide key={i}>
-                        <div className={styles.logoOuter}>
-                            <Image 
-                            src={logo.image}
-                            alt={logo.alt} 
-                            height="10rem"
-                            width="100%"
-                            fit="contain"
-                            />
-                     </div>
-                    </Carousel.Slide>
-                )
-            })}
-        </Carousel>
+            
+            <div className={styles.carousel}>
+            <h2 className={styles.tech_header}>Explore my tech stack: </h2>
+            <Carousel 
+            slideSize="45" 
+            height={200} 
+            slideGap="md" 
+            loop
+            >
+                {logos.map((logo, i) => {
+                    return (
+                        <Carousel.Slide key={i}>
+                            <div className={styles.logoOuter}>
+                                <Image 
+                                src={logo.image}
+                                alt={logo.alt} 
+                                height="10rem"
+                                width="100%"
+                                fit="contain"
+                                />
+                        </div>
+                        </Carousel.Slide>
+                    )
+                })}
+            </Carousel>
+            </div>
     )
 };
 
