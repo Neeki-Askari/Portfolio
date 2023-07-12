@@ -33,9 +33,9 @@ const Projects: NextPage = () => {
                 <h1 className={styles.header}>Projects</h1>
                 <hr className={styles.line}/>
             </div>
-            {projects.map((project) => {
+            {projects.map((project, i) => {
                 return (
-                    <div className={styles.project}>
+                    <div key={i} className={styles.project}>
                         <h2 className={styles.projectHeader}>{project.name}</h2>
 
                         <div className={styles.projectDescription}>
@@ -45,10 +45,9 @@ const Projects: NextPage = () => {
                         <div className={styles.tech}>
                                 <SimpleGrid cols={project.tech.length}>
                                     {project.tech.map((logo, i) => (
-                                        <div className={styles.logo}>
+                                        <div key={i} className={styles.logo}>
                                             <Image 
                                             src={`/images/logos/${logo}.svg`} 
-                                            key={i} 
                                             alt={logo} 
                                             radius="sm"
                                             height="4rem"

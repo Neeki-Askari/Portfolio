@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&family=Libre+Baskerville:wght@700&family=Orbitron:wght@800&display=swap');
+
+.font-style {
+  font-family: 'Forum', cursive;
+}
+
 .main {
   font-size: 3rem;
   font-weight: 900;
@@ -24,6 +30,8 @@
     .navbarLogo {
       width: 6rem;
       height: 6rem;
+      display: flex;
+      margin: 3%;
     }
   }
 }
@@ -34,6 +42,11 @@
   align-items: center;
   margin-top: 3rem;
 
+  h2 {
+    @extend .font-style;
+    font-size: large;
+  }
+  
   .photo {
     display: flex;
     justify-content: center;
@@ -53,14 +66,15 @@
     width: 30rem;
     border-radius: 15px;
     color: white;
-    padding: 2%;
   }
 
   .tech_header {
     align-self: flex-start;
     margin-left: 10%;
-    margin-top: 5%;
+    margin-top: 12%;
+    margin-bottom: -5%;
     color: white;
+    font-size: small;
   }
 }
 

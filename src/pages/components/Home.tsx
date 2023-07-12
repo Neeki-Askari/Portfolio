@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { Button, Flex} from '@mantine/core';
+import { Button, Flex, Image} from '@mantine/core';
 import { IconFileDownload } from '@tabler/icons-react';
 import styles from "../../styles/Home.module.scss";
 import TechCarousel from "./TechCarousel";
@@ -40,7 +40,13 @@ const HomeContent: NextPage = () => {
                 </div>
                 <div className={styles.intro}>
                     <h2>Hello and Welcome! My name is </h2>
-                    <h1>Neeki</h1>
+                    <Image 
+                        width="15rem"
+                        height="15rem"
+                        src="/images/logo.png"
+                        fit="contain"
+                        sx={{margin: "-15%"}}
+                    />
                     <h2>I am a Software Engineer, </h2>
                     <h2>Puzzle Enthusiast, & Animal Lover</h2>
                 </div>

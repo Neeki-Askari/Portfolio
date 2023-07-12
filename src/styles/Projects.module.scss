@@ -1,4 +1,3 @@
-
 .projectsOuter {
     display: flex;
     justify-content: center;
@@ -12,17 +11,21 @@
       color: white;
       margin: 1rem; 
       width: 90%;
-  
-      .line {
+        
+        h1 {
+            font-size: 3.75rem;
+        }
+
+        .line {
         flex: 1;
         border: none;
         border-top: 1px solid white; 
-      }
+        }
 
-      .header {
+        .header {
         padding: 0.5rem;
         color: white;
-      }
+        }
     }
 
     .project {
@@ -35,7 +38,11 @@
         border-radius: 10px;
         box-shadow: 0 3px 3px rgb(0 0 0 / 0.2);
         margin-bottom: 2rem;
-        
+
+        h2 {
+        font-size: 1.7rem;
+        }
+
         .projectHeader {
             width: 100%;
             height: 20%;
@@ -57,7 +64,7 @@
             padding: 1rem;
 
             .projectSummary{
-            font-size: 1.2rem;
+                font-size: 1.3rem;
             }
 
             .githubLink {
@@ -80,6 +87,7 @@
             display: flex;
             align-self: flex-end;
             border-top: 1px solid white;
+            
 
             .logo {
                 width: 2.5rem;

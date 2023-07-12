@@ -29,7 +29,7 @@ const AboutPhotos: NextPage = () => {
     return (
         <div className={styles.aboutPhotosOuter}>
             <div className={styles.aboutPhotosHeader}>
-                <h3>Get to know me</h3>
+                <h2>Get to know me</h2>
             </div>
 
             <div className={styles.aboutMainPhoto}>
