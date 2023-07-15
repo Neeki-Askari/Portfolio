@@ -29,22 +29,41 @@
         border-top: 1px solid white; 
       }
     }
+
     .emailOuter {
       display: flex;
       flex-direction: column;
       text-align: left;
       width: 80vw;
+      margin: 2rem;
+
       .label {
+        @extend .font-style;
         color: white;
-  
-      }
-      .emailInput {
-        width: 60%;
+        font-size: 2rem;
         margin-bottom: 1rem;
       }
 
+      .emailInput {
+        width: 70%;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+        border-radius: 5px;
+        padding: 0.3rem;
+      }
+
       .subjectInput {
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+        border-radius: 5px;
+        padding: 0.3rem;
+      }
+
+      .messageInput {
+        height: 20rem;
+        font-size: 2rem;
+        padding: 0.5rem;
+        border-radius: 5px;
       }
     }
 }

@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import styles from "../../styles/About.module.scss";
-import { Card } from '@mantine/core';
 import AboutPhotos from "./AboutPhotos";
 
 const About: NextPage = () => {
