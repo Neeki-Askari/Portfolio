@@ -9,4 +9,7 @@ export const sendContactForm = async (data: Object) =>
 }).then((res) => {
     if(!res.ok) throw new Error("Failed to send message");
     return res.json();
+}).catch((error) => {
+    console.error("Error sending contact form: ", error);
+    throw error; // re-throw the error so it can be caught in the calling code
 });

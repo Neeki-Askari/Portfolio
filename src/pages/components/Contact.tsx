@@ -4,7 +4,7 @@ import { Button } from "@mantine/core";
 import { IconSend } from "@tabler/icons-react";
 import {ChangeEvent, useState} from "react";
 import {sendContactForm}  from "../../lib/api";
-import { Notifications, notifications } from '@mantine/notifications';
+import { notifications } from '@mantine/notifications';
 
 const Contact: NextPage = () => {
     interface EmailObject {
@@ -30,16 +30,21 @@ const Contact: NextPage = () => {
     const onSubmit = async (e: React.SyntheticEvent) => {
         e.preventDefault();
         try {
-            await sendContactForm(emailContent);
-            setEmailContent(initState);
+            sendContactForm(emailContent);
             notifications.show({
-                color: "indigo",
                 withCloseButton: true,
                 autoClose: 5000,
                 title: "Sent Message",
                 message: "You're message was successfully sent!"
-            })
+            });
+            setEmailContent(initState);
         } catch (error: any) {
+            notifications.show({
+                withCloseButton: true,
+                autoClose: 5000,
+                title: "ERROR",
+                message: "Could not send message"
+            })
             console.error(error);
         }
     }

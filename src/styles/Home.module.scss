@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Forum&family=Libre+Baskerville:wght@700&family=Orbitron:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
 
 .font-style {
   font-family: 'Forum', cursive;
@@ -75,8 +75,8 @@
     }
     h1 {
       @extend .font-style;
-      font-size: 7rem;
-      margin: 1.85rem;
+      font-size: 5.5rem;
+      margin: 1.75rem;
     }
   
   }
@@ -115,8 +115,8 @@
 }
 
 .logoOuter {
-  height: 10rem;
-  width: 10rem;
+  height: 8rem;
+  width: 8rem;
 
   .logoImage {
     width: auto;

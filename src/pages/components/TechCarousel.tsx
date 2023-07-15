@@ -51,7 +51,7 @@ const TechCarousel: NextPage = () => {
                                 <Image 
                                 src={logo.image}
                                 alt={logo.alt} 
-                                height="10rem"
+                                height="7rem"
                                 width="100%"
                                 fit="contain"
                                 />
