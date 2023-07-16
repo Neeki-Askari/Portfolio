@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { useOnIntersect } from "./Intersect";
+import { useOnIntersect } from "../../Intersect";
 import styles from "../../styles/Contact.module.scss"
 import { Button } from "@mantine/core";
 import { IconSend } from "@tabler/icons-react";

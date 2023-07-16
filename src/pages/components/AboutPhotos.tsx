@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { useOnIntersect } from "./Intersect";
+import { useOnIntersect } from "../../Intersect";
 import {useState} from "react";
 import styles from "../../styles/About.module.scss";
 import {Image, SimpleGrid } from '@mantine/core';

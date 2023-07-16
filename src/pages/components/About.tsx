@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { useOnIntersect } from "./Intersect";
+import { useOnIntersect } from "../../Intersect";
 import styles from "../../styles/About.module.scss";
 import AboutPhotos from "./AboutPhotos";
 
