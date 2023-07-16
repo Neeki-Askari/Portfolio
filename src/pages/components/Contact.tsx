@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import { useOnIntersect } from "./Intersect";
 import styles from "../../styles/Contact.module.scss"
 import { Button } from "@mantine/core";
 import { IconSend } from "@tabler/icons-react";
@@ -7,6 +8,7 @@ import {sendContactForm}  from "../../lib/api";
 import { notifications } from '@mantine/notifications';
 
 const Contact: NextPage = () => {
+    const [hiddenRef, isIntersecting] = useOnIntersect();
     interface EmailObject {
         email: string;
         subject: string;
@@ -51,7 +53,7 @@ const Contact: NextPage = () => {
 
     return (
     
-    <div id="Contact" className={styles.contactOuter}>
+    <div ref={hiddenRef} id="Contact" className={`${styles.contactOuter} ${isIntersecting ? "fadeIn" : "hidden"}`}>
         <div className={styles.divider}>
             <hr className={styles.line}/>
             <h1 className={styles.aboutText}>Contact</h1>

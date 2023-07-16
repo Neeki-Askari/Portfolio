@@ -1,13 +1,16 @@
 import type { NextPage } from "next";
-import { Button, Flex, Image} from '@mantine/core';
+import { useOnIntersect } from "./Intersect";
+import { Button, Flex} from '@mantine/core';
 import { IconFileDownload } from '@tabler/icons-react';
 import styles from "../../styles/Home.module.scss";
 import TechCarousel from "./TechCarousel";
 
 
 const HomeContent: NextPage = () => {
+    const [hiddenRef, isIntersecting] = useOnIntersect();
+
     return (
-        <div id="Home" className={styles.photo_and_tech}>
+        <div ref={hiddenRef} id="Home" className={`${styles.photo_and_tech} ${isIntersecting ? "fadeIn" : "hidden"}`}>
             <Flex
             direction="row"
             wrap="wrap"

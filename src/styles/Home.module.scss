@@ -12,7 +12,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  
 }
 
 
@@ -21,6 +21,8 @@
   z-index: 250;
   position: fixed;
   top: 0;
+  width: 100vw;
+  border: none;
 
   .navbarContents {
     display: flex;
@@ -86,7 +88,7 @@
       justify-content: center;
       flex-direction: column;
       width: 80vw;
-      margin: 2.5rem;
+      margin-top: 2.5rem;
 
       .tech_header {
         display: flex;

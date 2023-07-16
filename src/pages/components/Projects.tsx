@@ -1,9 +1,10 @@
 import type { NextPage } from "next";
+import { useOnIntersect } from "./Intersect";
 import styles from "../../styles/Projects.module.scss"
 import { SimpleGrid, Image, Flex} from '@mantine/core';
 
 const Projects: NextPage = () => {
-
+    const [hiddenRef, isIntersecting] = useOnIntersect();
     interface ProjectObject {
         name: string;
         summary: string;
@@ -27,7 +28,7 @@ const Projects: NextPage = () => {
     ]
 
     return (
-        <div id="Projects" className={styles.projectsOuter}>
+        <div ref={hiddenRef} id="Projects" className={`${styles.projectsOuter} ${isIntersecting ? "fadeIn" : "hidden"}`}>
             <div className={styles.divider}>
                 <hr className={styles.line}/>
                 <h1 className={styles.header}>Projects</h1>
@@ -42,7 +43,7 @@ const Projects: NextPage = () => {
             >
             {projects.map((project, i) => {
                 return (
-                    <div key={i} className={styles.project}>
+                    <div ref={hiddenRef} key={i} className={`${styles.project} ${isIntersecting ? "fadeIn" : "hidden"}`}>
                         <h2 className={styles.projectHeader}>{project.name}</h2>
 
                         <div className={styles.projectDescription}>

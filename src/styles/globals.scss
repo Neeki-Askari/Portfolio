@@ -13,9 +13,29 @@
   box-sizing: border-box;
   font-feature-settings: "cv01" 1, "cv03" 1, "cv04" 1, "cv05" 1, "cv06" 1,
     "cv08" 1, "cv09" 1, "cv10" 1;
+
 }
 
 html {
   font-size: 62.5%;
-  background-color: #363636;
+  background-color: #272728;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.fadeIn {
+  animation: fadeIn 800ms;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

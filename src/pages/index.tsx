@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import {useEffect} from "react";
 import Head from "next/head";
 import HomeContent from "./components/Home";
 import About from "./components/About";
@@ -9,6 +10,14 @@ import { MantineProvider } from "@mantine/core";
 
 
 const Home: NextPage = () => {
+
+  useEffect(() => {
+    let hiddenElements = document.querySelectorAll(".hidden");
+    hiddenElements.forEach((element) => {
+      element.classList.add("slideIn");
+    });
+  }, []);
+
   return (
     <MantineProvider>
       <Notifications position="bottom-center" zIndex={1000} />

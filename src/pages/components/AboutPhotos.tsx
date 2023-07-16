@@ -1,9 +1,11 @@
 import type { NextPage } from "next";
+import { useOnIntersect } from "./Intersect";
 import {useState} from "react";
 import styles from "../../styles/About.module.scss";
 import {Image, SimpleGrid } from '@mantine/core';
 
 const AboutPhotos: NextPage = () => {
+    const [hiddenRef, isIntersecting] = useOnIntersect();
     interface ImageObject {
         image: string,
         caption: string, 
@@ -27,7 +29,7 @@ const AboutPhotos: NextPage = () => {
     const [main, setMain] = useState<ImageObject>(images[0])
 
     return (
-        <div className={styles.aboutPhotosOuter}>
+        <div ref={hiddenRef} className={`${styles.aboutPhotosOuter} ${isIntersecting ? "fadeIn" : "hidden"}`}>
             <div className={styles.aboutPhotosHeader}>
                 <h2>Get to know me</h2>
             </div>
