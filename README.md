@@ -29,17 +29,16 @@ Then, install the project dependencies:
 ## Running the Application
 
 You can start the development server with:
-    ```bash
+
     npm run dev
-    ```
+
 Build the application with:
-    ```bash
+
     npm run build
-     ```
+
 Start the application with:
-    ```bash
+
     npm run start
-    ```
 ## Contact
 
 If you have any questions, feel free to contact me at `neeki.askari@gmail.com` or send me a message through my website. Enjoy browsing through the portfolio!
