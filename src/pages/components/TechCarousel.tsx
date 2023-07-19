@@ -29,6 +29,7 @@ const TechCarousel: NextPage = () => {
         {image: "/images/logos/mysql.svg", alt: "mysql-logo", marginLeft: "40%"}, 
         {image: "/images/logos/postgres.svg", alt: "postgres-logo", marginLeft: "40%"},
         {image: "/images/logos/mongo.svg", alt: "mongo-logo", marginLeft: "40%"},
+        {image: "/images/logos/docker.svg", alt: "docker-logo", marginLeft: "40%"},
         {image: "/images/logos/jest.svg", alt: "jest-logo", marginLeft: "30%"},
         {image: "/images/logos/mocha.svg", alt: "mocha-logo", marginLeft: "20%"},
         {image: "/images/logos/chai.svg", alt: "chai-logo", marginLeft: "10%"},
@@ -39,10 +40,24 @@ const TechCarousel: NextPage = () => {
             <div className={styles.carousel}>
             <h2 className={styles.tech_header}>Explore my tech stack: </h2>
             <Carousel 
-            slideSize="45" 
-            height={200} 
+            dragFree={true}
+            slideSize={50} 
+            height={150} 
             slideGap="md" 
+            previousControlLabel="previous-button"
+            nextControlLabel="next-button"
             loop
+            sx={{
+                ".mantine-Carousel-controls": {
+                    top: "30%",
+                    width: "110%",
+                    left: "-5%"
+                },
+                ".mantine-Carousel-control": {
+                    backgroundColor: "indigo",
+                    color: "white"
+                },
+            }}
             >
                 {logos.map((logo, i) => {
                     return (

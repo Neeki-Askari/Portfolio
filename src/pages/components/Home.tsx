@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import Image from 'next/image'
 import { useOnIntersect } from "../../Intersect";
 import { Button, Flex} from '@mantine/core';
 import { IconFileDownload } from '@tabler/icons-react';
@@ -19,13 +20,20 @@ const HomeContent: NextPage = () => {
             rowGap="4rem"
             >
                 <div className={styles.photo}>
-                    <img src="/images/Neeki.jpg" alt="neeki-photo" className={styles.image}/>
+                <Image
+                src="/images/Neeki.webp"
+                alt="neeki-photo"
+                className={styles.image}
+                width={200}  
+                height={200}  
+                />
                 </div>
                 <div className={styles.intro}>
                     <h2>Hello and Welcome! My name is </h2>
                     <h1>NEEKI</h1>
                     <h2>I am a Software Engineer, </h2>
-                    <h2>Puzzle Enthusiast, & Animal Lover</h2>
+                    <h2>Puzzle Enthusiast,</h2>
+                    <h2>& Animal Lover</h2>
                     <Button 
                         component="a"
                         target="_blank"

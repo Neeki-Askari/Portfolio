@@ -22,9 +22,9 @@ const Home: NextPage = () => {
     <MantineProvider>
       <Notifications position="bottom-center" zIndex={1000} />
       <Head>
-        <title>Next TS Template</title>
+        <title>Neeki Askari</title>
         <link rel="icon" href="/favicon.ico" />
-        <meta name="description" content="Your Apps Description" />
+        <meta name="description" content="Portfolio Website" />
       </Head>
       <main >
         <HomeContent />

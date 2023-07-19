@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Sample Web App Title</title>
+        <title>Neeki's Portfolio</title>
         <meta name="description" content="Sample Web App Description" />
         <meta
           name="keywords"

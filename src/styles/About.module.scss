@@ -32,7 +32,6 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 85vw;
         padding-left: 3rem;
         padding-right: 3rem;
 
@@ -40,6 +39,7 @@
           font-size: 1.8rem;
           padding: 0.5rem;
           color: white;
+          margin: 1.5rem;
         }
     }
   
@@ -80,16 +80,13 @@
             width: 90%;
             height: 20rem;
             margin-top: 2rem;
-
-            p {
-              font-size: 1.15rem;
-            }
         }
-
+        
         .caption {
             margin: 1%;
             text-align: center;
             color: whitesmoke;
+            font-size: 1.25rem;
         }
 
         .grid {

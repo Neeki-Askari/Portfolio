@@ -2,9 +2,11 @@ import type { NextPage } from "next";
 import { useOnIntersect } from "../../Intersect";
 import {useState} from "react";
 import styles from "../../styles/About.module.scss";
-import {Image, SimpleGrid } from '@mantine/core';
+import {Image, SimpleGrid, Modal } from '@mantine/core';
+import { useDisclosure } from '@mantine/hooks';
 
 const AboutPhotos: NextPage = () => {
+    const [opened, { open, close }] = useDisclosure(false);
     const [hiddenRef, isIntersecting] = useOnIntersect();
     interface ImageObject {
         image: string,
@@ -26,7 +28,8 @@ const AboutPhotos: NextPage = () => {
         alt: "bearded-dragon"},
     ];
 
-    const [main, setMain] = useState<ImageObject>(images[0])
+    const [main, setMain] = useState<ImageObject>(images[0]);
+    const [showModal, setShowModal] = useState<boolean>(false);
 
     return (
         <div ref={hiddenRef} className={`${styles.aboutPhotosOuter} ${isIntersecting ? "fadeIn" : "hidden"}`}>
@@ -41,10 +44,38 @@ const AboutPhotos: NextPage = () => {
                 height="16rem"
                 width="100%"
                 fit="contain"
+                onClick={() => {
+                    setShowModal(true);
+                    open()
+                }}
                 />
                 <p className={styles.caption}>{main.caption}</p>
             </div>
-
+            {showModal ? 
+                <Modal 
+                opened={opened} 
+                onClose={close}
+                centered={true}
+                size="md"
+                keepMounted={true}
+                sx={{
+                    ".mantine-Modal-content": {
+                        backgroundColor: "gray",
+                        color: "white"
+                    },
+                    ".mantine-Modal-header": {
+                        backgroundColor: "gray",
+                        color: "white"
+                    },
+                    ".mantine-Modal-close": {
+                        color: "white",
+                    },
+                }}
+                >
+                <Image src={main.image} alt={main.alt} />
+                <p style={{fontSize: "1.3rem", textAlign: "center"}}>{main.caption}</p>
+                </Modal> 
+                : null}
             <div className={styles.grid}>
             <SimpleGrid cols={4} spacing="lg">
             {images.map((image) => (

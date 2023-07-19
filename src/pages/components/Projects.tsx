@@ -13,8 +13,12 @@ const Projects: NextPage = () => {
     }
 
     const projects: ProjectObject[] = [
+        {name: "Portfolio", 
+        summary: "A responsive and modern personal portfolio website.",
+        tech: ["javascript", "typescript", "nextjs", "react", "docker", "mantine"],
+        link: "BeFriends"},
         {name: "BeFriends", 
-        summary: "A full stack web application where users can connect with others in their area and find friends based on their interests and hobbies",
+        summary: "A full stack web application where users can connect with others in their area.",
         tech: ["javascript", "nodejs", "react", "tailwind", "vite", "express", "axios", "postgres"],
         link: "BeFriends"},
         {name: "HyperLoop API",
@@ -22,7 +26,7 @@ const Projects: NextPage = () => {
         tech: ["javascript", "nodejs", "express", "postgres"],
         link: "Hyperloop-API"},
         {name: "WALL-E Mart",
-        summary: "A modern storefront front-end application to provide a seamless and engaging shopping experience for users",
+        summary: "A front-end application to provide a seamless and engaging shopping experience for users.",
         tech: ["javascript", "nodejs", "react", "express", "axios", "jest"],
         link: "Wall-E-Mart"}
     ]

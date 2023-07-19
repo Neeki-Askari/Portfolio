@@ -1,15 +1,12 @@
 import type { NextPage } from "next";
-import Link from 'next/link';
-import {useState} from "react";
-import {Navbar, Burger, useMantineTheme, Drawer, Image} from "@mantine/core"
+import { useDisclosure } from '@mantine/hooks';
+import { Navbar, Burger } from "@mantine/core"
 import styles from "../../styles/Home.module.scss";
-
+import Menu from "./Menu";
 
 const NavBar: NextPage = () => {
-    const theme = useMantineTheme();
-    const [opened, setOpen]= useState<boolean>(false);
-
-    const menuItems = ["Home", "About", "Projects", "Contact"]
+    const [opened, { open, close }] = useDisclosure(false);
+    const label = opened ? 'Close navigation' : 'Open navigation';
 
     return (
         <div>
@@ -25,42 +22,17 @@ const NavBar: NextPage = () => {
                 </div>
                 <Burger
                     opened={opened}
-                    onClick={() => setOpen((o) => !o)}
+                    onClick={opened ? close : open}
                     size="lg"
-                    color={theme.colors.gray[6]}
+                    color="white"
                     mr="xl"
+                    aria-label={label}
                     sx={{margin: "0.5rem"}}
                 />
 
                 </div>
             </Navbar>
-            <Drawer 
-            opened={opened} 
-            onClose={() => setOpen((o) => !o)} 
-            position="right"
-            size="sm"
-            padding="lg"
-            shadow="md"
-            zIndex={2}
-            sx={{
-                ".mantine-Drawer-content": {
-                    backgroundImage: "linear-gradient(#2d1850 , indigo)"
-                }}}
-            >
-            {menuItems.map((item, i) => {
-               return (
-                <div key={i} className={styles.link}>
-                    <Link 
-                    href={`#${item}`}
-                    onClick={() => setOpen((o) => !o)} 
-                    className={styles.linkText}
-                    >
-                        {item} 
-                    </Link>
-                </div>
-               )
-            })}
-            </Drawer>
+            <Menu opened={opened} close={close} />
         </div>
     );
 };
