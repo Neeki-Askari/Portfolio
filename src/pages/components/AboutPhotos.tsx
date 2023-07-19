@@ -1,8 +1,9 @@
 import type { NextPage } from "next";
+import Image from 'next/image'
 import { useOnIntersect } from "../../Intersect";
 import {useState} from "react";
 import styles from "../../styles/About.module.scss";
-import {Image, SimpleGrid, Modal } from '@mantine/core';
+import {SimpleGrid, Modal } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 
 const AboutPhotos: NextPage = () => {
@@ -41,9 +42,9 @@ const AboutPhotos: NextPage = () => {
                 <Image 
                 src={main.image}
                 alt={main.alt} 
-                height="16rem"
-                width="100%"
-                fit="contain"
+                className={styles.mainPhoto}
+                height={150}
+                width={200}
                 onClick={() => {
                     setShowModal(true);
                     open()
@@ -56,12 +57,18 @@ const AboutPhotos: NextPage = () => {
                 opened={opened} 
                 onClose={close}
                 centered={true}
-                size="md"
+                size="lg"
                 keepMounted={true}
+                fullScreen={false}
                 sx={{
                     ".mantine-Modal-content": {
                         backgroundColor: "gray",
-                        color: "white"
+                        color: "white",
+                    },
+                    ".mantine-Modal-body": {
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "center"
                     },
                     ".mantine-Modal-header": {
                         backgroundColor: "gray",
@@ -72,7 +79,12 @@ const AboutPhotos: NextPage = () => {
                     },
                 }}
                 >
-                <Image src={main.image} alt={main.alt} />
+                <Image 
+                src={main.image} 
+                alt={main.alt} 
+                width={200} 
+                height={200}
+                style={{width: "auto", height: "50vw",  maxHeight: "300px", objectFit: "contain", margin: "none"}}/>
                 <p style={{fontSize: "1.3rem", textAlign: "center"}}>{main.caption}</p>
                 </Modal> 
                 : null}
@@ -83,10 +95,9 @@ const AboutPhotos: NextPage = () => {
                     src={image.image} 
                     key={image.image} 
                     alt={image.alt} 
-                    radius="md"
-                    height="5rem"
-                    width="5rem"
-                    fit="cover"
+                    className={styles.thumbnail}
+                    height={50}
+                    width={50}
                     onClick={() => setMain(image)} 
                     />
             ))}

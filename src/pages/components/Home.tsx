@@ -26,6 +26,7 @@ const HomeContent: NextPage = () => {
                 className={styles.image}
                 width={200}  
                 height={200}  
+                priority={true}
                 />
                 </div>
                 <div className={styles.intro}>

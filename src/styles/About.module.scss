@@ -80,17 +80,28 @@
             width: 90%;
             height: 20rem;
             margin-top: 2rem;
-        }
-        
-        .caption {
-            margin: 1%;
-            text-align: center;
-            color: whitesmoke;
-            font-size: 1.25rem;
+
+            .mainPhoto {
+              height: 15rem;
+              width: auto;
+              object-fit: contain;
+            }
+            .caption {
+                margin: 1%;
+                text-align: center;
+                color: whitesmoke;
+                font-size: 1.25rem;
+            }
         }
 
         .grid {
             margin: 1rem;
+
+            .thumbnail {
+              width: 5rem;
+              height: 5rem;
+              object-fit: cover;
+            }
         }
 
     }
