@@ -1,15 +1,20 @@
 import type { NextPage } from "next";
-import { useDisclosure } from '@mantine/hooks';
 import { Navbar, Burger } from "@mantine/core"
 import styles from "../../styles/Home.module.scss";
 import Menu from "./Menu";
 
-const NavBar: NextPage = () => {
-    const [opened, { open, close }] = useDisclosure(false);
+export type NavProps = {
+    opened: boolean;
+    close: ()=>void;
+    open: ()=>void;
+};
+
+const NavBar: NextPage<NavProps> = ({opened, close, open}) => {
+
     const label = opened ? 'Close navigation' : 'Open navigation';
 
     return (
-        <div>
+        <div id="navbar">
             <Navbar 
             p={10} 
             height={85} 
@@ -32,7 +37,6 @@ const NavBar: NextPage = () => {
 
                 </div>
             </Navbar>
-            <Menu opened={opened} close={close} />
         </div>
     );
 };
