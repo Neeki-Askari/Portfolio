@@ -11,15 +11,15 @@ const Menu: React.FC<MenuProps> = ({opened, close}) => {
     
     const handleMenuClick = (item: string) => {
         const targetElement = document.getElementById(item);
-            const navbarHeight = document.getElementById("navbar")?.offsetHeight || 0
-            if (targetElement) {
-            var topOfElement = targetElement.offsetTop - navbarHeight;
-            window.scrollTo({
-                top: topOfElement,
-                behavior: "smooth"
-            })
-            }
-            close();
+        const navbarHeight = document.getElementById("navbar")?.offsetHeight || 0
+        if (targetElement) {
+        var topOfElement = targetElement.offsetTop - navbarHeight;
+        window.scrollTo({
+            top: topOfElement,
+            behavior: "smooth"
+        })
+        }
+        close();
     }
 
     return (
